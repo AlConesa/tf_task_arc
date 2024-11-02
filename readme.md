@@ -18,4 +18,22 @@ See below some other alternatives depending on those factors:
 - Infra: If the company has already a K8s cluster that we could use to deploy an open source orchestrator tool like airflow. This tool comes with SQL Server operators. This tool is python based and allows deliver every ETL process as code. This facilitates collaboration and peer reviewing. In my opinion this would be better when several DE in the team
 - There is also a tool called Astronomer that offers Airflow as a service that would help to have airflow as Saas.
 
-DWH: Snowflake
+DWH: Snowflake. Another fully Saas tool not like Databricks (control pane needs to be in the customer cloud) that would not required any infra set up. It includes capability for ML with snowpark and allows the use of snowflake notebooks for experimentation. It has good performance and support open source table format like iceberg. It could be expensive if not set up properly. There are other less expenisve alternatives like Firebolt but they do not offer ML and notebooks capability.
+
+Transformation tool DBT: DBT Core is an open source tool that can be plug to the ELT tool Fivetran and allows to create DBT models. It is SQL native and can really help Analyst to create sql models in a centralised manner via git. It allows collaboration and cross-functional knowledge
+
+Visualisation Tool: Looker. Looker allows defining metrics in a semantic layer. Metrics can be defined in a centralised repo and share them accroos the business.
+
+# Other features
+Once the data platform is mature it would be easy to use to ingest new sources:
+- Third party data to enrich our DWH
+- API calls to monitor the healt of our operational system
+- Clickstream data like google analytics or adobe analytics
+
+We could move some of the jobs out of the operational data:
+- Files extract
+- Reverse ETL processes
+- Etc...
+
+We could embed reports in the customer portal and show some analytics to the users without impacting operational databases
+
