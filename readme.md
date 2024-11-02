@@ -1,5 +1,6 @@
 # Shellcorp Architecture
 
+![image](https://github.com/user-attachments/assets/eb4f4eb9-3a6a-495a-ac33-611c373e68a7)
 
 Assumptions:
  - No mature SRE function
